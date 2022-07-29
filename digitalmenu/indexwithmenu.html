@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burger Yiyelim</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .navbar {
+        overflow: hidden;
+        background-color: rgb(121, 121, 121);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        cursor: pointer;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn,
+      .dropbtn:focus {
+        background-color: #333;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: #ddd;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">
+          Menu
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#">Burgerler</a>
+          <a href="#">İçecekler</a>
+          <a href="#">Zartlar</a>
+          <a href="#">Zurtlar</a>
+          <a href="#">Tatlılar</a>
+          <a href="#">Burger Menüler</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+  <!-- *Logo -->
+  <body style="background-color: #202124;">
+    <div align="center">
+      <img
+        width="250"
+        height="150"
+        src="image/a35554ea00f9f65bf7c6ef6051d4e98e.png"
+        alt="logo"
+      />
+      <h1 style="color: white;" >Hoşgeldiniz</h1>
+    </div>
+    <!-- *Steak Burger -->
+    <div class="container">
+      <div class="menu">
+        <h2 style="color: white;" class="menu-group-heading">Burgerler</h2>
+        <div class="menu-group">
+          <div class="menu-item">
+            <img class="menu-item-image" src="image/steak.jpg" alt="Steak" />
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span style="color: white;" class="menu-item-name">Steak Burger</span>
+                <span style="color: white;" class="menu-item-price">79.90₺</span>
+              </h3>
+              <p style="color: white;" class="menu-item-description">
+                Mükemmel steak burger falan fişmekan
+              </p>
+            </div>
+          </div>
+          <!-- *Whopper Burger -->
+          <div class="menu-item">
+            <img class="menu-item-image" src="image/whoopper.jpg" alt="Whopper" />
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span style="color: white;" class="menu-item-name">Whopper Burger</span>
+                <span style="color: white;" class="menu-item-price">45.90₺</span>
+              </h3>
+              <p style="color: white;" class="menu-item-description">
+                Klasik fukara burgeri
+              </p>
+            </div>
+          </div>
+
+          <!-- *Dublex Burger -->
+          <div class="menu-item">
+            <img class="menu-item-image" src="image/dublex.jpg" alt="Dublex" />
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span style="color: white;" class="menu-item-name">Dublex Burger</span>
+                <span style="color: white;" class="menu-item-price">59.90₺</span>
+              </h3>
+              <p style="color: white;" class="menu-item-description">Hocam et var iki tane öyle.</p>
+            </div>
+          </div>
+        </div>
+        <!-- *İçecekler -->
+        <h2 style="color: white;" class="menu-group-heading">İçecekler</h2>
+        <div class="menu-group">
+          <div class="menu-item">
+            <img class="menu-item-image" src="image/cola.png" alt="Kola" />
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span style="color: white;" class="menu-item-name">Coca Cola</span>
+                <span style="color: white;" class="menu-item-price">15₺</span>
+              </h3>
+              <p style="color: white;" class="menu-item-description">330mL Coca Cola</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img class="menu-item-image" src="image/fanta.png" alt="Fanta" />
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span style="color: white;" class="menu-item-name">Fanta</span>
+                <span style="color: white;" class="menu-item-price">15₺</span>
+              </h3>
+              <p style="color: white;" class="menu-item-description">330mL Fanta</p>
+            </div>
+          </div>
+          <div class="menu-group">
+            <div class="menu-item">
+              <img class="menu-item-image" src="image/sprite.png" alt="Sprite" />
+              <div class="menu-item-text">
+                <h3 class="menu-item-heading">
+                  <span style="color: white;" class="menu-item-name">Sprite</span>
+                  <span style="color: white;" class="menu-item-price">15₺</span>
+                </h3>
+                <p style="color: white;" class="menu-item-description">330mL Sprite</p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img class="menu-item-image" src="image/ayran.png" alt="Ayran" />
+              <div class="menu-item-text">
+                <h3 class="menu-item-heading">
+                  <span style="color: white;" class="menu-item-name">Ayran</span>
+                  <span style="color: white;" class="menu-item-price">10₺</span>
+                </h3>
+                <p style="color: white;" class="menu-item-description">330mL Ayran</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
